@@ -1,1 +1,2 @@
 # Pthread-Library
+An attempt at replicating the pthread library. Uses jmp_buf to store the current memory context and switch between them quickly with sigaction and long_jmp. Also included are semaphore functions to handle thread protection. Thread information is stored in Thread Control Blocks (TCB) and deleted threads are handled using my garbage collection function (which is another thread I switch to for safer memory deletion). Code does not leak :D
